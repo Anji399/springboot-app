@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        registry = "378032438507.dkr.ecr.us-east-1.amazonaws.com/spring"
+        registry = "378032438507.dkr.ecr.us-east-1.amazonaws.com/spring:latest"
     }
     
     stages {
