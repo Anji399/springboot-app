@@ -1,10 +1,7 @@
 pipeline {
     agent any
 
-    environment {
-        registry = "378032438507.dkr.ecr.us-east-1.amazonaws.com/spring:latest"
-    }
-    
+  
     stages {
         stage ("package") {
             steps {
@@ -14,7 +11,7 @@ pipeline {
         stage ("Build image") {
             steps {
                 script {
-                    docker.build registry
+                    docker build . -t spring
                 }
             }
         }
