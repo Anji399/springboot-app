@@ -6,6 +6,11 @@ pipeline {
     }
     
     stages {
+        stage ("package") {
+            steps {
+               sh 'mvn clean package'
+            }
+        }
         stage ("Build image") {
             steps {
                 script {
