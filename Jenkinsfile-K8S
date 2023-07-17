@@ -10,8 +10,7 @@ pipeline {
         }
         stage ("Build image") {
             steps {
-                script {
-                    docker build . -t spring
+                sh 'docker build -t spring .'
                 }
             }
         }
